@@ -32,3 +32,13 @@ local function rescaleRoboport(name, newLogisticRadius)
 end
 
 rescaleRoboport("roboport", 16)
+
+if data.raw['roboport']["bob-roboport-2"] then
+  rescaleRoboport("bob-roboport-2", 16*2)
+end
+if data.raw['roboport']["bob-roboport-3"] then
+  rescaleRoboport("bob-roboport-3", 16*3)
+end
+if data.raw['roboport']["bob-roboport-4"] then
+  rescaleRoboport("bob-roboport-4", 16*4)
+end

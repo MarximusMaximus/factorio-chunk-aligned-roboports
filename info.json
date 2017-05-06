@@ -1,12 +1,13 @@
 {
   "name": "chunk-sized-roboports",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "factorio_version": "0.15",
   "title": "Chunk sized roboports and power poles.",
   "author": "Graveeater",
   "homepage": "",
   "description": "Resizes the roboports area to fit exactly one chunk, the big power pole to span one chunk and the substations to cover one quarter of a chunk.",
   "dependencies": [
-    "base >= 0.15.9"
+    "base >= 0.15.9",
+    "?boblogistics >= 0.15.2"
   ]
 }

@@ -2,6 +2,7 @@ local round = function(x)
   return math.floor(x+0.5)
 end
 
+-- big pole
 do
   local bigPole = data.raw["electric-pole"]["big-electric-pole"]
   local radiusRatio = 32 / bigPole.maximum_wire_distance
@@ -14,8 +15,8 @@ do
     entry[2] = round(entry[2] * radiusRatioSquared)
   end
 end
--- substation
 
+-- substation
 do
   local substation = data.raw["electric-pole"]["substation"]
   local radiusRatio = 8 / substation.supply_area_distance

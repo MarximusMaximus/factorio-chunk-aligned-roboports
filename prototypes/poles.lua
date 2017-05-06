@@ -1,3 +1,5 @@
+local rescaleRecipe = require("prototypes/util")
+
 local round = function(x)
   return math.floor(x+0.5)
 end
@@ -10,10 +12,7 @@ do
   bigPole.maximum_wire_distance = 32
 
   local recipe = data.raw["recipe"]["big-electric-pole"]
-  local ingredients = recipe.ingredients
-  for _,entry in ipairs(ingredients) do
-    entry[2] = round(entry[2] * radiusRatioSquared)
-  end
+  rescaleRecipe(recipe, radiusRatioSquared)
 end
 
 -- substation
@@ -25,8 +24,5 @@ do
   substation.supply_area_distance = 8
   
   local recipe = data.raw["recipe"]["substation"]
-  local ingredients = recipe.ingredients
-  for _,entry in ipairs(ingredients) do
-    entry[2] = round(entry[2] * radiusRatioSquared)
-  end
+  rescaleRecipe(recipe, radiusRatioSquared)
 end

@@ -1,3 +1,5 @@
+local rescaleRecipe = require("prototypes/util")
+
 local round = function(x)
   return math.floor(x+0.5)
 end
@@ -17,18 +19,11 @@ local function rescaleRoboportEntity(entity, newLogisticRadius)
   return radiusRatioSquared
 end
 
-local function rescaleRoboportRecipe(recipe, radiusRatioSquared)
-  local ingredients = recipe.ingredients
-  for _,entry in ipairs(ingredients) do
-    entry[2] = math.max(round(entry[2] * radiusRatioSquared), 1)
-  end
-end
-
 local function rescaleRoboport(name, newLogisticRadius)
   local entity = data.raw["roboport"][name]
   local radiusRatioSquared = rescaleRoboportEntity(entity, newLogisticRadius)
   local recipe = data.raw["recipe"][name]
-  rescaleRoboportRecipe(recipe, radiusRatioSquared)
+  rescaleRecipe(recipe, radiusRatioSquared)
 end
 
 local function rescaleIfFound(name, newLogisticRadius)

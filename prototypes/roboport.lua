@@ -42,3 +42,8 @@ rescaleRoboport("roboport", 16)
 rescaleIfFound("bob-roboport-2", 16 * 2)
 rescaleIfFound("bob-roboport-3", 16 * 3)
 rescaleIfFound("bob-roboport-4", 16 * 4)
+
+rescaleIfFound("bob-logistic-zone-expander", 16)
+rescaleIfFound("bob-logistic-zone-expander-2", 16 * 2)
+rescaleIfFound("bob-logistic-zone-expander-3", 16 * 3)
+rescaleIfFound("bob-logistic-zone-expander-4", 16 * 4)

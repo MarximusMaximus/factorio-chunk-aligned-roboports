@@ -10,7 +10,9 @@ roboport.logistics_radius = 16
 roboport.construction_radius = 2 * roboport.logistics_radius + extraConstructionRadius
 
 -- TODO use the prototype value
-roboport.energy_usage = round(50 * radiusRatioSquared) .. "kW"
+local oldEnergyUsage = tonumber(roboport.energy_usage:sub(1,-3))
+local oldUnit = roboport.energy_usage:sub(-2)
+roboport.energy_usage = round(oldEnergyUsage * radiusRatioSquared) .. oldUnit
 
 local recipe = data.raw["recipe"]["roboport"]
 local ingredients = recipe.ingredients

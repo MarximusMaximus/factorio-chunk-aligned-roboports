@@ -4,6 +4,7 @@ end
 
 local function rescaleRecipe(recipe, factor)
   local ingredients = recipe.ingredients
+  if not ingredients then return end
   for _,entry in ipairs(ingredients) do
     if entry[2] then
       entry[2] = math.max(round(entry[2] * factor), 1)

@@ -32,7 +32,13 @@ local function rescaleIfFound(name, newLogisticRadius)
   end
 end
 
-rescaleRoboport("roboport", 16)
+if mods["IndustrialRevolution"] then
+  rescaleRoboport("roboport", 32)
+  rescaleRoboport("robotower", 16)
+else
+  rescaleRoboport("roboport", 16)
+end
+
 
 rescaleIfFound("bob-roboport-2", 16 * 2)
 rescaleIfFound("bob-roboport-3", 16 * 3)

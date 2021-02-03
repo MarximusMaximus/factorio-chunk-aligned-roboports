@@ -1,5 +1,7 @@
 local rescaleRecipe = require("prototypes/util")
 
+local extraRadius = settings.startup["graveater-chunk-sized-roboport-wiggle-area"].value and 1 or 0
+
 local round = function(x)
   return math.floor(x+0.5)
 end
@@ -33,18 +35,18 @@ local function rescaleIfFound(name, newLogisticRadius)
 end
 
 if mods["IndustrialRevolution"] then
-  rescaleRoboport("roboport", 32)
-  rescaleRoboport("robotower", 16)
+  rescaleRoboport("roboport", 32 + extraRadius)
+  rescaleRoboport("robotower", 16 + extraRadius)
 else
-  rescaleRoboport("roboport", 16)
+  rescaleRoboport("roboport", 16 + extraRadius)
 end
 
 
-rescaleIfFound("bob-roboport-2", 16 * 2)
-rescaleIfFound("bob-roboport-3", 16 * 3)
-rescaleIfFound("bob-roboport-4", 16 * 4)
+rescaleIfFound("bob-roboport-2", 16 * 2 + extraRadius)
+rescaleIfFound("bob-roboport-3", 16 * 3 + extraRadius)
+rescaleIfFound("bob-roboport-4", 16 * 4 + extraRadius)
 
-rescaleIfFound("bob-logistic-zone-expander", 16)
-rescaleIfFound("bob-logistic-zone-expander-2", 16 * 2)
-rescaleIfFound("bob-logistic-zone-expander-3", 16 * 3)
-rescaleIfFound("bob-logistic-zone-expander-4", 16 * 4)
+rescaleIfFound("bob-logistic-zone-expander", 16 + extraRadius)
+rescaleIfFound("bob-logistic-zone-expander-2", 16 * 2 + extraRadius)
+rescaleIfFound("bob-logistic-zone-expander-3", 16 * 3 + extraRadius)
+rescaleIfFound("bob-logistic-zone-expander-4", 16 * 4 + extraRadius)

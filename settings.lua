@@ -1,20 +1,20 @@
 data:extend({
   {
-    name = "graveater-chunk-sized-roboport-wiggle-area",
+    name = "marximus-chunk-aligned-roboport-enable",
     type = "bool-setting",
     setting_type = "startup",
     default_value = false,
     order = "aa",
   },
     {
-    name = "graveater-chunk-sized-powerpole-wiggle-reach",
+    name = "marximus-chunk-aligned-powerpole-enable",
     type = "bool-setting",
     setting_type = "startup",
     default_value = false,
     order = "ba",
   },
   {
-    name = "graveater-chunk-sized-powerpole-wiggle-area",
+    name = "marximus-chunk-aligned-substation-enable",
     type = "bool-setting",
     setting_type = "startup",
     default_value = false,

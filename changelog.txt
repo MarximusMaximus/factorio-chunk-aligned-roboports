@@ -1,0 +1,10 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2. 22. 2022
+  Features:
+    - Forked from chunk-sized-roboports 3.2.1 by Graveeater
+    - Resizes roboports area to fit exactly one and half chunks
+    - Resizes big power pole to span one chunk
+    - Resizes substations to cover one quarter of a chunk
+    - Supports some modded roboports, power poles, and substations (custom sizes for each)
+
